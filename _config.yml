@@ -1,12 +1,37 @@
 # Welcome to Jekyll!
 #
-remote_theme: "mmistakes/minimal-mistakes@4.19.0"
+# Site Settings
+title: Integration Trench
+email:
+description: >- # this means to ignore newlines until "baseurl:"
+  This blog shares my mistakes and lessons in identity integration and software in general
+twitter_username: username
+github_username: username
+minimal_mistakes_skin: default
+search: true
 
-minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
-title                    : "Integration Trench"
-subtitle                 : "Sharing lessons from practical experience" # site tagline that appears below site title in masthead
-description: "This blog shares my mistakes and lessons in identity integration and software in general."
+
+# Build settings
+markdown: kramdown
+remote_theme: mmistakes/minimal-mistakes
+# Outputting
+permalink: /:categories/:title/
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+include:
+  - _posts
+
+# Plugins (previously gems:)
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
 
 # Site Author
 author:
@@ -19,15 +44,46 @@ author:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url:    "https://twitter.com/getcmart"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/craig-martin"
-      
+
 footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url:    "https://twitter.com/getcmart"
+      url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/craig-martin"
+      url: "https://github.com/"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/"
+
+#github_username: craig-martin
+github: [metadata]
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
