@@ -1,0 +1,9 @@
+main:
+  - title: "Home"
+    url: /
+  - title: "About"
+    url: /about/
+  # - title: "Twitter"      
+  #   url:    "https://twitter.com/getcmart"
+  # - title: "GitHub"
+  #   url: "https://github.com/craig-martin"
