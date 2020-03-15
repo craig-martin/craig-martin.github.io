@@ -5,30 +5,8 @@ remote_theme: "mmistakes/minimal-mistakes@4.19.0"
 minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 title                    : "Integration Trench"
-title_separator          : "-"
 subtitle                 : "Sharing lessons from practical experience" # site tagline that appears below site title in masthead
-name: Craig Martin
-email: craigmartin@live.com
 description: "This blog shares my mistakes and lessons in identity integration and software in general."
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "craig-martin.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter:
-  username: getcmart
-#github:
-# username: craig-martin
-
-defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: false
-      read_time: true
-      comments: true
-      share: false
-      related: true
 
 # Site Author
 author:
@@ -44,7 +22,7 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/craig-martin"
-
+      
 footer:
   links:
     - label: "Twitter"
@@ -53,6 +31,3 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/craig-martin"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url:  
