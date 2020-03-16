@@ -10,7 +10,7 @@ header:
   caption: "Photo credit: [**ThingLink**](https://www.thinglink.com/scene/883003955959824386)"
 excerpt: "Sharing systems integration lessons learned (usually the hard way)"
 intro: 
-  - excerpt: 'Nullam suscipit et nam, tellus velit pellentesque at malesuada, enim eaque. Quis nulla, netus tempor in diam gravida tincidunt, *proin faucibus* voluptate felis id sollicitudin. Centered with `type="center"`'
+  - excerpt: 'Blog about systems integration and security, focused on Microsoft.  Opinions are my own.  Centered with `type="center"`'
 ---
 ---
 
