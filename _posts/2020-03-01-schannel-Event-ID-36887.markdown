@@ -10,6 +10,6 @@ Did battle with this event log error recently.  It turned out to be an IIS bindi
 
 To reproduce:
 * Turn off SNI in the IIS web application bindings
-* Browse to the site using HTTPS://<IP Address>
+* Browse to the site using ```HTTPS://<IP Address>```
 * *FAIL*
 * See Event ID 36887 in the Event Log showing an error code of 46
