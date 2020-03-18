@@ -36,7 +36,7 @@ plugins:
 # Site Author
 author:
   name             : "Craig Martin"
-  avatar           : "/assets/craig.png"
+  avatar           : "/assets/android-chrome-192x192.png"
   bio              : "Learning and sharing"
   location         : "Pacific Northwest"
   email            :
