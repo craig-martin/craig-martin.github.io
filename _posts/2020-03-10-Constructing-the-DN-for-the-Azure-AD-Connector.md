@@ -24,7 +24,21 @@ Searching for a CSObject in the Azure Active Directory connector space is diffic
 CN={714E52566836554B77555772666F674F3675363846413D3D}
 ```
 
-The DN above is constructed from the anchor attribute, in my case it is a Device object and the anchor attribute is the DeviceId attribute:
+*Update - 2020-03-18*
+
+
+The DN above is constructed using the sourceAnchor attribute.  The sourceAnchor attribute is constructed in at least two ways:
+1. If the object is cloud-mastered (DeviceTrustType = AzureAD) then sourceAnchor recipe is:
+```powershell
+'Device_<AAD ObjectId attribute>'
+```
+
+2. If the object is mastered on-premises (DeviceTrustType = ServerAD), then
+```powershell
+[System.Convert]::ToBase64String(([GUID]'AAD DeviceId attribute').ToByteArray())
+```
+
+from the anchor attribute, in my case it is a Device object and the anchor attribute is the DeviceId attribute:
 
 ``` powershell
 Get-AzureADDevice -SearchString icemelted | Select-Object *
