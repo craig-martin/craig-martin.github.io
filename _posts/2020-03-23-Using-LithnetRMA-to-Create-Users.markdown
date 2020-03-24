@@ -8,7 +8,7 @@ tags: [MIM, Lithnet, PowerShell]
 
 Most of the time MIM gets Person objects created by the Synchronization Service, but sometimes it is useful to create them directly in the MIM Service, for example in development environments.
 
-The sample below shows how to use the (LithnetRMA)[https://github.com/lithnet/resourcemanagement-powershell/wiki] to create a new Person object with enough attributes for it to access the MIM Service.  The only trick to this scenario is the ObjectSID attribute.  If that attribute is missing or incorrect then the MIM Service will deny access.
+The sample below shows how to use the [LithnetRMA](https://github.com/lithnet/resourcemanagement-powershell/wiki) to create a new Person object with enough attributes for it to access the MIM Service.  The only trick to this scenario is the ObjectSID attribute.  If that attribute is missing or incorrect then the MIM Service will deny access.
 
 ```powershell
 <#
