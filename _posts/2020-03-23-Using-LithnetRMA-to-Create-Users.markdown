@@ -42,9 +42,9 @@ Create the new Person object in memory, then save it to MIM
     Note: the $newPerson object enjoys some nice intellisense if type type '.' after the variable name
 #>
 $newPerson = New-Resource -ObjectType Person
-$newPerson.AccountName  = 'sc-cm180'
-$newPerson.Domain       = 'Redmond'
-$newPerson.DisplayName  = 'Craig (sc-alt)'
+$newPerson.AccountName  = 'Amanda'
+$newPerson.Domain       = 'Litware'
+$newPerson.DisplayName  = 'Amanda Hugnkiss'
 $newPerson.ObjectSID    = $securityIdentifierBytes
 Save-Resource $newPerson 
 
@@ -53,8 +53,8 @@ Review the object by getting it back from the MIM Service
 #>
 Get-Resource -ObjectType Person -AttributeName AccountName -AttributeValue 'cmart' -AttributesToGet ObjectSID,Domain,AccountName
 <#
-AccountName                      : sc-cm180
-Domain                           : Redmond
+AccountName                      : Amanda
+Domain                           : Litware
 ObjectSID                        : {1, 5, 0, 0...}
 ObjectType                       : Person
 #>
