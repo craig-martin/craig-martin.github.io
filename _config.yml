@@ -53,6 +53,9 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://www.instagram.com/craigmartin529/"
+    - label: "Strava"
+      icon: "fab fa-fw fa-strava"
+      url: "https://strava.com/athletes/craig-martin"
 
 footer:
   links:
@@ -68,6 +71,9 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://www.instagram.com/craigmartin529/"
+    - label: "Strava"
+      icon: "fab fa-fw fa-strava"
+      url: "https://strava.com/athletes/craig-martin"  
 
 #github_username: craig-martin
 github: [metadata]
