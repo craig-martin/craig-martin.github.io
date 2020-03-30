@@ -1,0 +1,27 @@
+---
+layout: single
+classes: wide
+share: false
+title: Weekly Retro - March 27
+tags:
+- Retro
+---
+# So Retro
+My favorite ceremony in scrum is the [sprint retrospective](https://www.scrum.org/resources/what-is-a-sprint-retrospective) because it provides the opportunity to inspect and adapt.  I'm going to start posting weekly about the good and bad of my week because it'll be fun for me to review later, and hopefully others can learn from my mistakes in the trenches.
+
+# Shared Environments -eq Bad
+My team has a lot of MIM deployments and we share some development environments which is something I know to be cause for trouble.  While working in one of the shared development environments I lost work because a co-worker was working in the same environment and needed to reset it.  That was motivation enough to spend time investing in automation.  We have some shared [Azure Resource Manager (ARM) Templates](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/) to create a virtual machine in a somewhat standard way so that gave me a head start.  The next items I needed to automate were:
+* SharePoint installation
+* SharePoint configuration for MIM
+* MIM Service and Portal installation
+* MIM Synchronization Service
+
+I've got it mostly working and am looking forward to sharing it once I de-couple it from our internal ARM templates.  It is mostly based on [PowerShell Desired State Configuration (DSC)](https://docs.microsoft.com/en-us/powershell/scripting/dsc/getting-started/winGettingStarted?view=powershell-7) and I'm trying to use the [SharePointDSC module](https://github.com/dsccommunity/SharePointDsc) as much as possible.
+
+Having mostly solved the environment problem I can easily create multiple MIM installations in the morning then delete them in the evening.
+
+# DSC for MIM -eq Good
+With MIM *installation* figured out the next challenge is MIM *configuration*.  I've spent a ton of time on this and had considered updating it, even finished half of it at the [MIMDsc module](https://github.com/microsoft/MIMDSC).  MIM is quite long in the tooth so I'm conflicted about investing too much time in it but like I said earlier, I have a lot of MIM in my environment so it stands to be a big productivity boost for me personally.  Bonus if it helps someone else too!  If I do finish the MIM Service part of the DSC resource module I will be taking a dependency on the [LithnetRMA](https://github.com/lithnet/resourcemanagement-powershell/wiki) PowerShell module; I've been using it more lately instead of my other tools and I'm really liking it! 
+
+# Log Analytics -eq Awesome
+A few months ago I started copying MIM Sync Run History to Log Analytics because I was in love with the Kusto language for tearing through large amounts of data.  It worked so well that I did the same for Azure AD Connect Run Profile Results.  I thought about sharing the Log Analtics PowerShell module I created then realized a *very* similar one already existed, so instead I am going to merge my changes into that one and work with the author to publish the updates to the PowerShell Gallery.  There was no repository for the module code so I created one and will probably move it to a more appropriate location later.  For now it's here: [AzureMonitorDataCollectorPowerShellModule](https://github.com/craig-martin/AzureMonitorDataCollectorPowerShellModule) and I'm working on tests for the existing code before I muck with it.
