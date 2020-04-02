@@ -82,3 +82,5 @@ VERBOSE: Operation 'Invoke CimMethod' complete.
 VERBOSE: Time taken for configuration job to complete is 2.736 seconds
 
 ```
+
+In the log output above the Test function in DSC found the ViewState to be in the wrong state, so it executed the Set function to put the item into the desired state.
