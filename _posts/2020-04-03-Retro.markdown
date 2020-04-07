@@ -1,0 +1,17 @@
+---
+layout: single
+classes: wide
+share: false
+title: Weekly Retro - April 3
+tags:
+- Retro
+---
+# So Retro
+My favorite ceremony in scrum is the [sprint retrospective](https://www.scrum.org/resources/what-is-a-sprint-retrospective) because it provides the opportunity to inspect and adapt.  This is my weekly post about the good and bad of my week because it'll be fun for me to review later, and hopefully others can learn from my mistakes in the trenches.
+
+# On-Call -eq Good
+My role is Service Engineer, and I get about one week of primary on-call per month.  Being on-call is something I actually enjoy because on my team it is not that intrusive (no 3AM wake-up calls) and I really enjoy investigating issues.  My team also does sprint planning and tracks capacity so I block out my time with a 40-hour task to represent my on-call time; that way I have no guilt for diving into unplanned work (incidents) and do not over-commit my time.  This past week was pretty tame in that I didn't get any issues that required really extensive investigation, most of them were pretty easy to sort out.  
+
+# MIM VM Automation -eq Challenging
+This still is not as repeatable as I wish it were.  It has come a long way but now I seem to be finding issues creeping in from the environment.  For example, one of the first things I do when the VM is running is to install some PowerShell DSC resource modules from the PowerShell Gallery.  The installation of those modules has always worked without issue but this week it failed because of a TLS issue, which I think was caused by a group policy pushed onto the VM from our Active Directory domain, fair enough, but now I need to make sure Install-Module still works.  Getting closer!
+
