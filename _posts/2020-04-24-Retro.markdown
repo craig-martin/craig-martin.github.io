@@ -1,0 +1,38 @@
+---
+layout: single
+classes: wide
+share: false
+title: Weekly Retro - April 24
+tags:
+- Retro
+---
+# So Retro
+My favorite ceremony in scrum is the [sprint retrospective](https://www.scrum.org/resources/what-is-a-sprint-retrospective) because it provides the opportunity to inspect and adapt.  This is my weekly post about the good and bad of my week because it'll be fun for me to review later, and hopefully others can learn from my mistakes in the trenches.
+
+# Story Sizing -eq Important
+The geek in me loves sprint planning for what it promises.  The retro is my favorite ceremony but I love the idea that in sprint planning a team member can commit to finish something they believe can be delivered.  Can it really be delivered though?  Do you really know enough about the tasks required to deliver that value as a working system?  Answering 'yes' to that question forces me to task out the story because the work always seems easier in my head *before* I list out all of the work required to actually deliver the thing, for example:
+
+* design (including incorporating team feedback when necessary)
+* implementation - the obvious part
+* instrumentation - the ops part of our dev ;-)
+* test development
+* code review
+* deployment - including any change control
+
+See? It adds up quick to something that might not fit into that sprint.  Some stories do not require that much process, but often they do or should.
+
+Anyhow, when I fail to size stories properly I feel a crushing guilt at the end of the sprint because I promised to deliver something but can't claim my reward because the thing isn't done, and probably needs to be dragged into the next sprint (the Scrum drag of shame).
+
+Right now I'm delivering something that seems to an infinitely renewable source of detours, making it nearly impossible to deliver anything.  I honor the obstacles in my way and actively seek them out since they usually represent guidance that can't be ignored, but it sure makes it difficult to deliver impact sometimes.
+
+In the interim I'm doing my best to create stories that are small enough to withstand the detours, giving me the chance to deliver the story no matter how small, and claim my Scrum victory ;-)
+
+# Learning -eq Fun
+PowerShell has been a great deal of fun to learn and use, and makes me way more productive in my job still today.  When I have a tough question to answer using data from disparate systems PowerShell usually gets me an answer and leads me to the next question.  Python has been on my list of things to learn for quite a while and I've dabbled but haven't done anything useful.  Part of my job is to participate in defender activities, which makes use of Jupyter notebooks and Python.  To ramp up for this part of my job I now have a very good reason for diving into Python.  Looking forward to learning and contrasting, then eventually contributing!
+
+# Legacy -eq Questionable
+The systems I support are referred to as legacy (MIM, AD), man that happened fast.  Sometimes I find myself doing something interesting with the *legacy* stuff then remind myself that it is legacy and feel a small bit of shame for working on old stuff.  The thing is, I enjoy working on systems no matter how old or gnarly.  Twenty years ago (damn!) I used to work on a team called EC3 at Microsoft and our motto was:
+> I've done so much with so little for so long,
+> Now I can do anything with nothing forever.
+
+Some people crave working on green field systems but I have a strange passion for brown field systems too.  Balance is important, so I'm always seeking ways to learn something new even when working on legacy systems.  That keeps me happy, but having a relevant skill set is obviously important so investing too much in MIM and AD while ignoring new systems is a risk I'm always trying to mitigate.
