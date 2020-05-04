@@ -1,0 +1,29 @@
+---
+layout: single
+classes: wide
+share: false
+title: Weekly Retro - May 1
+tags:
+- Retro
+---
+# So Retro
+My favorite ceremony in scrum is the [sprint retrospective](https://www.scrum.org/resources/what-is-a-sprint-retrospective) because it provides the opportunity to inspect and adapt.  This is my weekly post about the good and bad of my week because it'll be fun for me to review later, and hopefully others can learn from my mistakes in the trenches.
+
+# Group Policy Learning -eq Legacy But Good
+Our team handles group policy with just a couple of people that specialize in it, and we need to load balance better so I'm going to start doing it as well.  What could possibly go wrong?  I've never dealt with Group Policy much but I do enjoy working with the sync service (state based enforcement) and Desired State Configured, so I'm looking forward to seeing Group Policy in the trenches.  The first step in my little journey was to spend a couple hours riding [Zwift](https://zwift.com) while watching training videos in the [Group Policy learning path at PluralSight](https://app.pluralsight.com/paths/skill/group-policy-administration).  My next step will be to get an Azure ARM Template for creating a test environment to learn in.
+
+# Azure AD joining -eq shiny and new
+Having domain joined machines for a couple of decades it kinda fascinates me to now be able to Azure AD join computers.  Here's a neat article describing some of the differences: [Moving laterally between Azure AD joined machines](https://medium.com/@talthemaor/moving-laterally-between-azure-ad-joined-machines-ed1f8871da56).  Looking forward to using this more and learning more about it.
+
+# Raspberry Pi -eq great little testers
+Love these cheap little computers and have been messing around with them with the kids, but recently they came in really handy for testing scenarios from non-domain computers, and non-Windows computers.  So quick and cheap to get going, and fun to learn at the same time.
+
+# Computer Controls without Group Policy -eq challenging and new
+Many of our documented computer controls are implemented with Group Policy, so adhering to the controls is as simple as joining a computer to the Active Directory domain.  Some computers just can't be joined to the domain, so it's going to be fun trying to implement as many controls as possible without Group Policy.  Luckily I'm also ramping up on our Group Policy infrastructure so this should be fun.
+
+# Parental Leave -eq thankful to work for a great company
+As the pandemic became increasingly serious I've been really impressed with how company leadership has reacted.  A couple weeks ago I found out about a couple programs available to parents, giving them the flexibility to take leave in order to spend time with their families.  This generosity and flexibility blows me away.  Load balancing on teams is already challenging so if a couple of people take this leave on a small team then the impact could be huge (or loss of impact).  Looking forward to spending more time with my kiddos which I already have the luxury of since we are working remotely now, but I haven't decided yet to take more of the leave.  Yet...
+
+
+
+
