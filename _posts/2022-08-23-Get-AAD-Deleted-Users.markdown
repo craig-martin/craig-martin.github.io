@@ -43,3 +43,12 @@ In my case, two issues prevented this from working:
 - leaving out $count from the query string 
 - leaving out the ConsistencyLevel header with a value of 'eventual' 
 
+The sample above worked great, here is what I ended up with to:
+- return only Litware.ca users
+- return only items deleted in the past couple of days (we delete a lot of users)
+- return the count of deleted users
+- return just a few attributes for each user
+
+```
+https://graph.microsoft.com/v1.0/directory/deletedItems/microsoft.graph.user?$filter=endswith(mail,'@litware.ca')+and+deletedDateTime+ge+2022-08-20T00:00:00Z&$count=true&$select=mail,mailnickname,employeeid,onPremisesImmutableId
+```
