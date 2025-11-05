@@ -1,0 +1,10 @@
+---
+layout: single
+classes: wide
+share: false
+title: It Was DNS 
+tags: [DNS]
+---
+
+Whelp, I guess that domain is gone.
+```
