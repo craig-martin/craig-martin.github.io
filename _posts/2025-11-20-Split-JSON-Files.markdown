@@ -31,3 +31,6 @@ To deal with the 10mb ingestion limit, I could either modify the extract to prod
 For now I've chosen to split the files, since it will be reusable and keeps the extract free of the logic to create smaller files.
 
 The PowerShell function to split JSON files is here: [Split-JsonFile.ps1](https://gist.github.com/craig-martin/de9a9b7d02763c008f1459329624ab37).  It will need some improvements, which I plan to get to soon, but it works so far.
+
+The approach is simple, but does not have great performance because it loads the entire JSON file into memory using Get-Content and ConvertFrom-Json.  Taking that approach got me to done faster, but I want to go back and improve the function using a forward-only reader to avoid loading the whole file into memory.  
+At the moment I can get by with this approach because the input files are under 100MB, but I don't think this will scale to input files over 1GB.
