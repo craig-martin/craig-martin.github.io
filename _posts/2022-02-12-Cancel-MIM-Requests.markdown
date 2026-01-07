@@ -25,3 +25,18 @@ Save-Resource -Resources $request[0]
 #View the Request again
 Get-Resource -ID $request[0].ObjectID
 ```
+
+The above sample may not work if the request has active Action Workflow Instances.  In that case the request status will be *PostProcessing* then set the RequestControl property to *CancelActionWorkflow*:
+
+```powershell
+#Query for Request objects
+$requests = Search-Resources -XPath "/Request[RequestStatus='PostProcessing']"
+
+#Cancel just one Request
+$request[0].RequestControl = 'CancelActionWorkflow'
+Save-Resource -Resources $request[0]
+
+#View the Request again
+Get-Resource -ID $request[0].ObjectID
+```
+
